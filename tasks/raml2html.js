@@ -26,7 +26,7 @@
           grunt.file.write(dest, html);
           grunt.log.writeln("file " + dest.cyan + " created");
           return next();
-        }).fail(function(error) {
+        }).catch(function(error) {
           grunt.log.error(error);
           return done(false);
         });
